@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fischyweb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,Helvetica,sans-serif;background:#f4f4f4;
+         display:flex;flex-direction:column;justify-content:center;
+         align-items:center;height:100vh;}
+    #container{text-align:center;}
+    h1{font-size:4rem;color:#333;margin-bottom:1rem;}
+    button{padding:.6rem 1.2rem;font-size:1rem;background:#333;color:#fff;
+           border:none;border-radius:4px;cursor:pointer;}
+    button:hover{background:#555;}
+    footer{margin-top:2rem;font-size:.9rem;color:#777;}
+    
+    /* Project card */
+    .card{
+      width:90%;max-width:400px;
+      background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1);
+      border-radius:8px;padding:1.5rem;margin-top:1.5rem;
+      text-align:left;
+    }
+    .card h2{font-size:1.4rem;margin-bottom:.5rem;}
+    .card p{margin-bottom:1rem;color:#555;}
+    .card .link-btn{
+      display:inline-flex;align-items:center;
+      text-decoration:none;
+      background:#0e2a61;color:#fff;padding:.5rem 1rem;border-radius:4px;
+      font-size:.95rem;
+    }
+    .card .link-btn:hover{background:#0b2364;}
+    .card .status{
+      margin-left:1rem;font-size:.9rem;color:#999;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Fischyweb</h1>
+    <button id="gotoBtn">Screen Hider</button>
+
+    <!-- Project card -->
+    <div class="card">
+      <h2>We are working on:</h2>
+      <p>Website hoster</p>
+      <a href="https://host.fischyweb.com" class="link-btn" target="_blank">Visit host.fischyweb.com</a>
+      <span class="status">right now the website is not up</span>
+    </div>
+  </div>
+
+  <footer>2025 All rights reserved.</footer>
+
+  <script>
+    const btn = document.getElementById('gotoBtn');
+    btn.addEventListener('click', () => {
+      document.getElementById('container').style.display = 'none';
+      window.location.href = 'https://cms.fischyweb.com';
+    });
+  </script>
+</body>
+</html>
